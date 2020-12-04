@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        Viajes Sorpresa
+    </title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="plugins/slick/slick.css">
+    <link rel="stylesheet" href="plugins/slick/slick-theme.css">
+    
+</head>
+
+
+
+<header class="site-header inicio">
+        <div class="contenedor contenido-header">
+        <div class="barra">
+            <body>
+                <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+                <script src="plugins/slick/slick.min.js"></script>
+                <script src="data2.json"></script>
+                <script src="assets/main.js"></script>
+                <script src="assets/trips.js"></script>
+
+                <a href="index.html">
+                    <img src="img/VIAJES SORPRESA (2).png" alt="Logotipo de Viajes Sorpresa">
+                </a>
+
+                <div class="mobile-menu">
+                    <a href="#navegacion">
+                        <img src="img/barras.svg" alt="Icono Menu">
+                    </a>
+                </div>
+
+                <nav id="navegacion" class="navegacion">
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+        </div>
+
+        <div class="general">
+        <form action="">
+            <div class="formulario">
+        
+            <label for="nombre">Lugar de Origen:</label>
+            <select name="origen" id="city-select" class="select-inicio" onfocus="focusEvent(this)" required  >
+                <option value="">Seleccionar...</option>
+                <option id="buenos-aires">Buenos Aires</option>
+                <option id="cordoba">Córdoba</option>
+                <option id="rosario">Rosario</option>
+                <option id="mendoza">Mendoza</option>
+            </select>
+            <label for="pasajeros">Cantidad de Adultos:</label>
+            <input required class="input-inicio" type="number" placeholder="1" id="adult-select" onfocus="focusEvent(this)" >
+        
+            <label for="pasajeros">Cantidad de Niños:</label>
+            <input class="input-inicio" type="number" placeholder="0" id="child-select" onfocus="focusEvent(this)">
+        
+            <label for="rango">Rango de precio:</label>
+            <select id="price-select" class="select-inicio" onfocus="focusEvent(this)" required>
+            <option value="" id="option-1" disabled selected>Seleccionar...</option>
+            <option value=15000-25000 id="option-4">$15000-$25000</option>
+            <option value=+25000 id="option-5">+$25000</option>
+           </select>
+        
+           <label for="fecha" >Fecha del viaje:</label>
+           <input type="date" id="date-select" class="input-inicio" onfocus="focusEvent(this)">
+        
+           <div class="checkbox">
+    
+           </div>
+           <span class="label">No tengo fecha definida:</span>
+           <input type="checkbox" id="checkbox-input" onclick="getNewTravelValue()">
+        
+           <input type="button" value="Buscar viajes" class="boton boton-blanco" id="form-submit" onclick="buildTrips()">
+        
+        </div>
+        </form>   
+</header>
+
+<div id="cont-p1">
+<p id="p1" style="display:none">Estos son los viajes elegidos para vos:</p>
+<p id="p2" style="display:none">No hay resultados para tu búsqueda por el momento</p>
+</div>
+
+<div class="contenedor-viajes" id="all-trips">
+</div>
+
+</main>
+<footer class="site-footer seccion">
+    <div class="contenedor contenedor-footer ">
+    <nav class="navegacion">
+        <a href="nosotros.html">Nosotros</a>
+        <a href="blog.html">Blog</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+    <a href="mailto:ask@viajesorpresa.com"><p class="copyright">ask@viajesorpresa.com</p></a>
+    <div>
+    <p class="copyright">Todos los derechos reservados 2020 &copy; </p>
+    </div> 
+</footer>
+</body>
+
+</html>
