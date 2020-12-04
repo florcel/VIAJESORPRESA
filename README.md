@@ -1,1 +1,1 @@
-https://prueba-viajesorpresa.netlify.app/
+https://viajesorpresa.netlify.app/
